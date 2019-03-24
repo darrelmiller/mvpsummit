@@ -17,7 +17,7 @@ namespace MVPSummitCore
 
         private static async Task AsyncMain()
         {
-            var app = DeviceCodeProvider.CreateClientApplication("5dba030e-37f3-4adc-8eb8-3e2e9e68aa0f", new FileBasedTokenStorageProvider());
+            var app = DeviceCodeProvider.CreateClientApplication("<InsertClientId>", new FileBasedTokenStorageProvider());
             var auth = new DeviceCodeProvider(app, new string[] { "User.Read" });
 
             var handlers = GraphClientFactory.CreateDefaultHandlers().ToList();
@@ -27,7 +27,6 @@ namespace MVPSummitCore
 
 
             var httpClient = GraphClientFactory.Create("v1.0/", handlers: handlers);
-
 
             var userResponse = await httpClient.GetStringAsync("me");
             Console.WriteLine();

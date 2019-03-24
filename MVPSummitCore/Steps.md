@@ -14,7 +14,7 @@ Reference Core Nuget (from Local Nugets)
 Reference Auth Nuget (from Local Nugets)
 
 ```csharp
-    var app = DeviceCodeProvider.CreateClientApplication("5dba030e-37f3-4adc-8eb8-3e2e9e68aa0f");
+    var app = DeviceCodeProvider.CreateClientApplication("<InsertClientId>");
     var auth = new DeviceCodeProvider(app, new string[] { "User.Read" });
 ```
 
