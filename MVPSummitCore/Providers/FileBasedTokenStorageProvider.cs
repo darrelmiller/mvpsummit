@@ -4,7 +4,7 @@ using Microsoft.Graph.Auth;
 
 namespace MVPSummitCore
 {
-    public class FileBasedTokenStorageProvider : ITokenStorageProvider
+    public class FileBasedTokenStorageProvider //: ITokenStorageProvider
     {
         public Task<byte[]> GetTokenCacheAsync(string cacheId)
         {

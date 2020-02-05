@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MVPSummit
 {
-    public class FileBasedTokenStorageProvider : ITokenStorageProvider
+    public class FileBasedTokenStorageProvider //: ITokenStorageProvider
     {
         public Task<byte[]> GetTokenCacheAsync(string cacheId)
         {

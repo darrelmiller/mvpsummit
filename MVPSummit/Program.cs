@@ -21,7 +21,7 @@ namespace MVPSummit
         {
             // Create Client Application and Authentication Provider
 
-            var app = InteractiveAuthenticationProvider.CreateClientApplication("<Insert ClientId here>",new FileBasedTokenStorageProvider());
+            var app = PublicClientApplicationBuilder.Create("<Insert ClientId here>").Build();
             var authProvider = new InteractiveAuthenticationProvider(app, new string[] { "User.Read"});
 
             // Create GraphServiceClient with middleware pipeline setup
